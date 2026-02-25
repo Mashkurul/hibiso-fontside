@@ -26,7 +26,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Hibis'o",
-  description: "This is a Hibis'o application",
+  description: "This is an Hibis'o application",
 };
 
 export default function RootLayout({
