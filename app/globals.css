@@ -2250,7 +2250,7 @@ canvas {
     left: 1rem;
     right: auto;
     bottom: -1.3rem;
-    width: min(64%, 340px);
+    width: min(64%, 360px);
   }
 
   .pricing-shell {
@@ -2520,7 +2520,8 @@ canvas {
   }
 
   .how-showcase {
-    max-width: 22.5rem;
+    width: 98%;
+    max-width: none;
     margin-left: auto;
     margin-right: auto;
     padding-top: 1.1rem;
