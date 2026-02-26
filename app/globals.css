@@ -2520,8 +2520,11 @@ canvas {
   }
 
   .how-showcase {
-    padding-top: 1.4rem;
-    padding-bottom: 1.8rem;
+    max-width: 22.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.1rem;
+    padding-bottom: 1.4rem;
     border-radius: 1.1rem;
   }
 
@@ -2546,15 +2549,16 @@ canvas {
   }
 
   .how-photo {
-    min-height: 320px;
+    min-height: 270px;
     border-radius: 1.2rem;
   }
 
   .how-float-card,
   .creator-showcase .how-float-card {
     position: static;
-    margin-top: 0.8rem;
-    width: 100%;
+    margin: 0.7rem auto 0;
+    width: 92%;
+    padding: 0.8rem 0.85rem;
   }
 
   .brands-marquee {
