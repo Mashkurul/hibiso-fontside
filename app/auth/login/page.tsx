@@ -3,6 +3,9 @@ import Link from "next/link";
 export default function LoginPage() {
   return (
     <main className="auth-page">
+      <Link className="auth-mobile-back" href="/">
+        Back
+      </Link>
       <section className="auth-shell">
         <aside className="auth-promo">
           <p className="auth-kicker">Welcome Back</p>

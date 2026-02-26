@@ -2,6 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { FooterCompanyLinks } from "@/app/component/footer-company-links";
 
+const brandLogos = [
+  {
+    name: "L'Oreal",
+    src: "/brands/loreal.svg",
+    width: 190,
+    height: 56,
+  },
+  {
+    name: "L'Occitane",
+    src: "/brands/loccitane.svg",
+    width: 210,
+    height: 56,
+  },
+  {
+    name: "Carhartt",
+    src: "/brands/carhartt.svg",
+    width: 200,
+    height: 56,
+  },
+];
+
 export function BrandsSection() {
   return (
     <section className="section section-brands">
@@ -11,33 +32,36 @@ export function BrandsSection() {
       <div className="brands-marquee" aria-label="Trusted brands">
         <div className="brands-motion">
           <div className="brands-track">
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
+            {brandLogos.map((brand, index) => (
+              <div className="brands-logo" key={`brand-a-${brand.name}-${index}`}>
+                <Image
+                  src={brand.src}
+                  alt={`${brand.name} logo`}
+                  width={brand.width}
+                  height={brand.height}
+                  className="brands-logo-img"
+                />
+              </div>
+            ))}
           </div>
           <div className="brands-track" aria-hidden="true">
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
-            <span>L’Oréal</span>
-            <span>L’Occitane</span>
-            <span>Carhartt</span>
+            {brandLogos.map((brand, index) => (
+              <div className="brands-logo" key={`brand-b-${brand.name}-${index}`}>
+                <Image
+                  src={brand.src}
+                  alt=""
+                  width={brand.width}
+                  height={brand.height}
+                  className="brands-logo-img"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
-
 export function HowBrandsSection() {
   return (
     <section className="section how-showcase brands-showcase scroll-animate">
@@ -250,7 +274,7 @@ export function OffersSection() {
           <p className="offer-plan-head">
             FORMULA MOANA{" "}
             <Image
-              src="/hibiscus-flower (1).svg"
+              src="/hibiscus2.svg"
               alt=""
               width={34}
               height={34}
@@ -279,7 +303,7 @@ export function OffersSection() {
           <p className="offer-plan-head">
             FORMULA HIBIS&apos;UN{" "}
             <Image
-              src="/hibiscus.svg"
+              src="/hibiscus3.svg"
               alt=""
               width={34}
               height={34}
@@ -308,6 +332,38 @@ export function OffersSection() {
 }
 
 export function TestimonialsSection() {
+  const testimonials = [
+    {
+      role: "Brand Manager",
+      company: "L'Occitane",
+      quote:
+        "We launched a summer collection campaign across three countries in two weeks. The content quality was exceptional and the creator direction was flawless from brief to delivery.",
+    },
+    {
+      role: "Digital Lead",
+      company: "Carhartt",
+      quote:
+        "Their creator network gave us authentic travel stories that converted better than studio-produced ads. We finally found a workflow that is both fast and high-end.",
+    },
+    {
+      role: "Marketing Team",
+      company: "L'Oreal",
+      quote:
+        "Smooth workflow, reliable creators, and premium visuals. This is now a core part of our global social strategy and paid content pipeline.",
+    },
+    {
+      role: "Growth Director",
+      company: "Sephora",
+      quote:
+        "We reduced campaign turnaround time by half while keeping premium visual quality. The process was structured, fast, and easy to scale across markets.",
+    },
+    {
+      role: "Head of Social",
+      company: "Adidas",
+      quote:
+        "From creator matching to final delivery, everything felt premium and dependable. The content has become a key asset for both paid and organic campaigns.",
+    },
+  ];
   return (
     <section className="section testimonial-wrap">
       <div className="section-head testimonial-head">
@@ -320,137 +376,48 @@ export function TestimonialsSection() {
       </div>
       <div className="testimonial-carousel">
         <div className="testimonial-grid">
-          <article className="testimonial-card">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              We launched a summer collection campaign across three countries in two
-              weeks. The content quality was exceptional and the creator direction
-              was flawless from brief to delivery.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Brand Manager</h3>
-                <p>L&apos;Occitane</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              Their creator network gave us authentic travel stories that converted
-              better than studio-produced ads. We finally found a workflow that is
-              both fast and high-end.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Digital Lead</h3>
-                <p>Carhartt</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              Smooth workflow, reliable creators, and premium visuals. This is now a
-              core part of our global social strategy and paid content pipeline.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Marketing Team</h3>
-                <p>L&apos;Oreal</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              We reduced campaign turnaround time by half while keeping premium
-              visual quality. The process was structured, fast, and easy to scale
-              across markets.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Growth Director</h3>
-                <p>Sephora</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              From creator matching to final delivery, everything felt premium and
-              dependable. The content has become a key asset for both paid and
-              organic campaigns.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Head of Social</h3>
-                <p>Adidas</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card testimonial-duplicate" aria-hidden="true">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              We launched a summer collection campaign across three countries in two
-              weeks. The content quality was exceptional and the creator direction
-              was flawless from brief to delivery.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Brand Manager</h3>
-                <p>L&apos;Occitane</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
-
-          <article className="testimonial-card testimonial-duplicate" aria-hidden="true">
-            <span className="quote-mark" aria-hidden="true">
-              &quot;
-            </span>
-            <p className="testimonial-quote">
-              Their creator network gave us authentic travel stories that converted
-              better than studio-produced ads. We finally found a workflow that is
-              both fast and high-end.
-            </p>
-            <div className="testimonial-meta">
-              <span className="testimonial-avatar" aria-hidden="true" />
-              <div>
-                <h3>Digital Lead</h3>
-                <p>Carhartt</p>
-              </div>
-              <span className="testimonial-rating">5/5</span>
-            </div>
-          </article>
+          <div className="testimonial-track">
+            {testimonials.map((item, index) => (
+              <article
+                className="testimonial-card"
+                key={`testimonial-a-${item.role}-${item.company}-${index}`}
+              >
+                <span className="quote-mark" aria-hidden="true">
+                  &quot;
+                </span>
+                <p className="testimonial-quote">{item.quote}</p>
+                <div className="testimonial-meta">
+                  <span className="testimonial-avatar" aria-hidden="true" />
+                  <div>
+                    <h3>{item.role}</h3>
+                    <p>{item.company}</p>
+                  </div>
+                  <span className="testimonial-rating">5/5</span>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className="testimonial-track" aria-hidden="true">
+            {testimonials.map((item, index) => (
+              <article
+                className="testimonial-card"
+                key={`testimonial-b-${item.role}-${item.company}-${index}`}
+              >
+                <span className="quote-mark" aria-hidden="true">
+                  &quot;
+                </span>
+                <p className="testimonial-quote">{item.quote}</p>
+                <div className="testimonial-meta">
+                  <span className="testimonial-avatar" aria-hidden="true" />
+                  <div>
+                    <h3>{item.role}</h3>
+                    <p>{item.company}</p>
+                  </div>
+                  <span className="testimonial-rating">5/5</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
