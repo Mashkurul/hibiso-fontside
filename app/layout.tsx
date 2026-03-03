@@ -27,6 +27,11 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Hibis'o",
   description: "This is an Hibis'o application",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
