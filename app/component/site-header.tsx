@@ -7,7 +7,7 @@ export function SiteHeader() {
       <div className="topbar-inner">
         <Link className="brand" href="/">
           <Image
-            src="/hibisofinal.svg"
+            src="/hibiso_logo.svg"
             alt="Hibiso logo"
             width={40}
             height={40}

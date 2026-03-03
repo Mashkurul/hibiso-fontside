@@ -25,7 +25,7 @@ export default function OffersPage() {
               Perfect for testing new markets with authentic content.
             </p>
             <p className="price-line">
-              <strong>$990</strong>
+              <strong>€990</strong>
               <span>/mo</span>
             </p>
             <ul className="feature-list">
@@ -57,7 +57,7 @@ export default function OffersPage() {
               Scale your presence with diverse creators and locations.
             </p>
             <p className="price-line">
-              <strong>$2,490</strong>
+              <strong>€2,490</strong>
               <span>/mo</span>
             </p>
             <ul className="feature-list warm-list">

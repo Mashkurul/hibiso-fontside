@@ -114,8 +114,8 @@ canvas {
 }
 
 .brand-logo {
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 6rem;
   object-fit: contain;
   flex: none;
 }
@@ -1441,8 +1441,8 @@ canvas {
 }
 
 .footer-logo {
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 6rem;
   object-fit: contain;
   flex: none;
 }
@@ -2389,11 +2389,6 @@ canvas {
     background: #efe6da;
   }
 
-  .brand-logo {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
   .brand {
     flex: none;
     margin-right: auto;
@@ -2556,10 +2551,7 @@ canvas {
 
   .how-float-card,
   .creator-showcase .how-float-card {
-    position: static;
-    margin: 0.7rem auto 0;
-    width: 92%;
-    padding: 0.8rem 0.85rem;
+    display: none;
   }
 
   .brands-marquee {

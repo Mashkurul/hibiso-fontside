@@ -197,7 +197,7 @@ export function HowCreatorsSection() {
         </div>
         <article className="how-float-card">
           <p>Campaign Matched</p>
-          <small>Bali - 3 deliverables - $450</small>
+          <small>Bali - 3 deliverables - €450</small>
           <div className="how-mini-grid">
             <div className="how-mini-cell">
               <Image
@@ -457,7 +457,7 @@ export function SiteFooter() {
           <section>
             <Link className="footer-brand" href="/">
               <Image
-                src="/hibisofinal.svg"
+                src="/hibiso_logo.svg"
                 alt="Hibiso logo"
                 width={40}
                 height={40}

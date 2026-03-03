@@ -71,7 +71,7 @@ export default function Home() {
                   <h3>Sarah J.</h3>
                   <p>Bali, Indonesia</p>
                 </div>
-                <span>$450.00</span>
+                <span>€450.00</span>
               </div>
             </article>
             <article className="campaign-card">
